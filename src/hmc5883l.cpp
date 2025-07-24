@@ -62,7 +62,7 @@ bool HMC5883L::isConnected() {
     // Try to read the chip ID register
     if (getChipId(chip_id)) {
         if (chip_id == CHIP_ID_VALUE) {
-            printf("QMC5883L detected (Chip ID: 0x%02X)\n", chip_id);
+            printf("QMC5883L detected-(Chip ID: 0x%02X)\n", chip_id);
             return true;
         } else {
             printf("Unknown chip ID: 0x%02X (expected: 0x%02X)\n", chip_id, CHIP_ID_VALUE);

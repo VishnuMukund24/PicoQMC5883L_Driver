@@ -33,12 +33,15 @@ project(hmc5883l C CXX ASM)
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
 
+# Adding include
+include_directories(include)
+
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(hmc5883l main.cpp )
+add_executable(hmc5883l main.cpp src/hmc5883l.cpp )
 
 # Add subdirectory
-add_subdirectory(src)
+# add_subdirectory(src)
 
 pico_set_program_name(hmc5883l "hmc5883l")
 pico_set_program_version(hmc5883l "0.1")
@@ -51,7 +54,6 @@ pico_enable_stdio_usb(hmc5883l 1)
 target_link_libraries(hmc5883l
         pico_stdlib
         hardware_i2c
-        hmc5883l_lib
         )
 
 # Add the standard include files to the build

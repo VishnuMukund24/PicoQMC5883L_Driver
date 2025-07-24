@@ -90,7 +90,7 @@ int main() {
                        data.x_raw, data.y_raw, data.z_raw);
                 printf("  Gauss values: X=%.3f, Y=%.3f, Z=%.3f\n", 
                        data.x_gauss, data.y_gauss, data.z_gauss);
-                printf("  Heading: %.2f degrees\n", data.heading_degrees);
+                printf("  Heading of : %.2f degrees\n", data.heading_degrees);
                 printf("  Temperature: %.1f°C\n", data.temperature_celsius);
                 
                 // Calculate magnetic field strength
